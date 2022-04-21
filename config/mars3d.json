@@ -1,0 +1,96 @@
+{
+  "map3d": {
+    "templateValues": {
+      "dataServer": "//data.mars3d.cn",
+      "gltfServerUrl": "//data.mars3d.cn/gltf"
+    },
+    "scene": {
+      "center": { "lat": 36.079719, "lng": 106.165336, "alt": 20154689, "heading": 0, "pitch": -90 },
+      "scene3DOnly": false,
+      "shadows": false,
+      "removeDblClick": true,
+      "sceneMode": 3,
+      "showSun": true,
+      "showMoon": true,
+      "showSkyBox": true,
+      "showSkyAtmosphere": true,
+      "fog": true,
+      "fxaa": true,
+      "requestRenderMode": true,
+      "contextOptions": { "webgl": { "alpha": true } },
+      "globe": {
+        "depthTestAgainstTerrain": false,
+        "baseColor": "rgba(0,0,0,0)",
+        "showGroundAtmosphere": true,
+        "enableLighting": false
+      },
+      "cameraController": {
+        "zoomFactor": 3.0,
+        "minimumZoomDistance": 1,
+        "maximumZoomDistance": 50000000,
+        "enableRotate": true,
+        "enableTranslate": true,
+        "enableTilt": true,
+        "enableZoom": true,
+        "enableCollisionDetection": true,
+        "minimumCollisionTerrainHeight": 15000
+      }
+    },
+    "control": {
+      "homeButton": true,
+      "baseLayerPicker": true,
+      "sceneModePicker": true,
+      "vrButton": false,
+      "fullscreenButton": false,
+      "navigationHelpButton": true,
+      "animation": false,
+      "timeline": false,
+      "infoBox": false,
+      "geocoder": false,
+      "selectionIndicator": false,
+
+      "defaultContextMenu": true,
+      "mouseDownView": true,
+      "zoom": { "insertIndex": 1 },
+      "compass": { "bottom": "toolbar", "left": "5px" },
+      "distanceLegend": { "left": "160px", "bottom": "2px" },
+      "locationBar": {
+        "fps": true,
+        "crs": "CGCS2000_GK_Zone_3",
+        "crsDecimal": 0,
+        "template": "<div>经度：{lng}</div> <div>纬度：{lat}</div> <div class='hide1000'>横：{crsx}  纵：{crsy}</div> <div>海拔：{alt}米</div> <div class='hide700'>层级：{level}</div> <div>方向：{heading}°</div> <div>俯仰角：{pitch}°</div> <div class='hide700'>视高：{cameraHeight}米</div>"
+      }
+    },
+    "terrain": {
+      "url": "//data.mars3d.cn/terrain",
+      "show": true
+    },
+    "basemaps": [
+      {
+        "pid": 10,
+        "name": "天地图影像",
+        "icon": "http://mars3d.cn/img/basemaps/tdt_img.png",
+        "type": "group",
+        "layers": [
+          { "name": "底图", "type": "tdt", "layer": "img_d", "key": ["cad502c85710c1c3ee00235c400518ff"] },
+          { "name": "注记", "type": "tdt", "layer": "img_z", "key": ["cad502c85710c1c3ee00235c400518ff"] }
+        ],
+        "show": true
+      },
+      {
+        "pid": 10,
+        "name": "天地图电子",
+        "icon": "http://mars3d.cn/img/basemaps/tdt_vec.png",
+        "type": "group",
+        "layers": [
+          { "name": "底图", "type": "tdt", "layer": "vec_d", "key": ["cad502c85710c1c3ee00235c400518ff"] },
+          { "name": "注记", "type": "tdt", "layer": "vec_z", "key": ["cad502c85710c1c3ee00235c400518ff"] }
+        ]
+      }
+    ],
+    "layers": [
+      { "id": 50, "name": "辅助图层", "type": "group" },
+      { "id": 99, "name": "数据图层", "type": "group" }
+    ]
+  }
+}
